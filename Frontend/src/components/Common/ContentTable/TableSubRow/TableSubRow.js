@@ -3,7 +3,7 @@ import React from "react";
 /* Page Links row */
 const TableSubRow = ({ links, globeIcon }) => {
   return (
-    <ul className="tableSubRow">
+    <ul className="tableSubRow" data-testid="tableSubRow">
       {links.map((link, i) => (
         <li key={i} className="link-li">
           <ul className="link_ul">

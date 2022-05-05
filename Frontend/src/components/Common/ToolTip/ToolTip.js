@@ -13,12 +13,14 @@ const ToolTip = ({ children, text, direction = "top" }) => {
   return (
     <div
       className="toolTip"
+      data-testid="toolTip"
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
       {children}
       {show && (
         <div
+          data-testid="toolTipText"
           className={cx(
             "toolTipText",
             { top: direction === DIRECTIONS.top },

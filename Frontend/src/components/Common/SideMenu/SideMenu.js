@@ -8,7 +8,7 @@ const SideMenu = ({
   handleInputChange,
 }) => {
   return (
-    <div className="sideMenu">
+    <div className="sideMenu" data-testid="sideMenu">
       <div className="formRow mt-1">
         <div className="lbl">
           <label htmlFor="url">URL</label>
@@ -50,7 +50,11 @@ const SideMenu = ({
         />
       </div>
       <div className="formRow mt-3">
-        <MainButton tooltip="Crawl" handleClick={handleSubmit}>
+        <MainButton
+          tooltip="Crawl"
+          handleClick={handleSubmit}
+          disabled={submitActive}
+        >
           {submitStatus}
         </MainButton>
       </div>

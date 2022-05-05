@@ -1,15 +1,13 @@
-import TableRow from './TableRow';
+import TableRow from "./TableRow";
 
-const ContentTable = ({ pages })=> {
-	return (
-		<ul className="contentTable">
-			{pages.map((page, i) => {
-				return(
-					<TableRow key={i} page_index={i} page={page} />
-				)
-			})}
-		</ul>
-	)
-}
+const ContentTable = ({ pages }) => {
+  return (
+    <div className="contentTable" data-testid="contentTable">
+      {pages.map((page, i) => {
+        return <TableRow key={i} page_index={i} page={page} />;
+      })}
+    </div>
+  );
+};
 
 export default ContentTable;

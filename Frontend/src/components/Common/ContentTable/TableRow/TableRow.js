@@ -7,13 +7,13 @@ const TableRow = ({ page_index, page }) => {
   const FAV_ICON = `${PAGE_URL.origin}/favicon.ico`;
   const GLOBE_ICON =
     "https://upload.wikimedia.org/wikipedia/commons/c/c4/Globe_icon.svg";
-  /* toggle show/hide page links */
+
   const toggleLinks = () => {
     setStatus(status === "SHOW" ? "HIDE" : "SHOW");
   };
 
   return (
-    <li className="tableRow">
+    <div className="tableRow" data-testid="tableRow">
       <div className="row row_container ">
         <ul className="page_container">
           <li className="p-col">
@@ -49,8 +49,10 @@ const TableRow = ({ page_index, page }) => {
               </li>
             </ul>
           </li>
-          <li className="p-col show-links" key="page_links_btn">
-            <button onClick={toggleLinks}>{status + " LINKS"}</button>
+          <li className="p-col show-links">
+            <button onClick={toggleLinks} data-testid="openLinksBtn">
+              {status + " LINKS"}
+            </button>
           </li>
         </ul>
       </div>
@@ -59,7 +61,7 @@ const TableRow = ({ page_index, page }) => {
           <TableSubRow links={page.links} globeIcon={GLOBE_ICON} />
         ) : null}
       </div>
-    </li>
+    </div>
   );
 };
 
