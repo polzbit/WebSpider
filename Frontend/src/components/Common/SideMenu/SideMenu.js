@@ -53,7 +53,7 @@ const SideMenu = ({
         <MainButton
           tooltip="Crawl"
           handleClick={handleSubmit}
-          disabled={submitActive}
+          disabled={!submitActive}
         >
           {submitStatus}
         </MainButton>

@@ -39,10 +39,11 @@ const Crawler = () => {
   const handleSubmit = async (e) => {
     const { url, maxDepth, maxPages } = state.values;
     const options = {
-      maxDepth: maxDepth.value,
-      maxPages: maxPages.value,
-      pages: [url.value],
+      maxDepth: maxDepth,
+      maxPages: maxPages,
+      pages: [url],
     };
+    console.log(options);
     await startCrawl({ options });
   };
 

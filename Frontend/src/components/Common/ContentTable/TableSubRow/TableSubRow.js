@@ -1,6 +1,5 @@
 import React from "react";
 
-/* Page Links row */
 const TableSubRow = ({ links, globeIcon }) => {
   return (
     <ul className="tableSubRow" data-testid="tableSubRow">
