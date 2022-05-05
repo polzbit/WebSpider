@@ -1,0 +1,42 @@
+.tableSubRow {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    border-top: 1px solid black;
+    width: 100%;
+    .link-li {
+        width: 85%;
+        margin-left: 15%;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        .link_ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: inherit;
+            .link-col {
+              width: 90%;
+              display: inline-block;
+              height: inherit;
+              .link-row {
+                    margin-left: 2vw;
+                    li{
+                        display: inline-block;
+                        text-align: left;
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        span  {
+                            font-weight: bold;
+                            margin-right: 2vw;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

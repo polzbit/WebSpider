@@ -1,0 +1,10 @@
+{
+  "logger": {
+    "level": "info",
+    "prettyPrint": {
+      "ignore": "pid"
+    }
+  },
+  "port": 5000,
+  "host": "0.0.0.0"
+}

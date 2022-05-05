@@ -1,0 +1,24 @@
+.crawl-pages, .page-row, .page-links, .link-row ,.page_container, .page-data{
+    list-style-type: none;
+    width: 85%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+.contentTable {
+    list-style-type: none;
+    width: 85%;
+    padding: 0;
+    text-align: left;
+    margin: 5vmin!important;
+    border-top: 1px solid black;
+    .favicon {
+        width: 10%!important;
+        height: 100%!important;
+        text-align: center;
+        img {
+          margin-left: 1vw;
+          margin-bottom: 2vh;
+        }
+      }
+  }

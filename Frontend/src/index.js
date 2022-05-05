@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-
+import { initIntercept } from './util/fetchInterceptService';
+initIntercept()
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -1,0 +1,36 @@
+.crawlerPage {
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  #view-section {
+    padding: none;
+    margin: none;
+    overflow: auto;
+  }
+  #form-section {
+    background: rgb(189, 189, 189);
+    padding: 2vw 3vh;
+    max-width: 30vw;
+  }
+  .bg {
+    flex: 2;
+  }
+  .sm {
+    flex: 1;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+  }
+  .title {
+    width: 70%;
+    height: 5vh;
+    padding-left: 0;
+    h2 {
+      margin-left: 5vw;
+    }
+  }
+}

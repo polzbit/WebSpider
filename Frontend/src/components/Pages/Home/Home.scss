@@ -1,0 +1,25 @@
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  .intro {
+    margin-top: -150px;
+    margin-bottom: 100px;
+    .intro-header {
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .intro-text {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  .mainButton {
+    height: 80px;
+    width: 160px;
+  }
+}

@@ -2,16 +2,9 @@
 
 ## Overview
 
-a simple web crawling service created using nodejs and react. 
-
-when the form is submited, api start to crawl domain pages. extracting page by page.
-UI updates on every page crawl that finished, then send POST for next page until pages equals to max page value.
-stop condition raised when no more pages are found or num of pages equals to max pages value.
-
-## Dependencies
-
-- [axsios](https://axios-http.com/docs/intro)
-- [cheerio](https://cheerio.js.org/)
+a simple web crawling service created using nodejs and react as front.
+just enter a valid url and the api will crawl that url fetching all the links that the crawler can find.
+back built using Fastify web framework.
 
 ## How To Build And Run Project
 
@@ -21,7 +14,7 @@ In the project Backend directory, run the following to install project dependenc
 
 to start the api server you can run:
 
-### `node server.js`
+### `npm start`
 
 In the project Frontend directory, run the following to install project dependencies:
 
@@ -51,4 +44,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](#running-tests) for more information.
-

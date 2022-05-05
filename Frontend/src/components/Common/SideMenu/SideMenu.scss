@@ -1,0 +1,33 @@
+.sideMenu {
+  .formRow {
+    display: flex;
+    flex-direction: row;
+
+    .lbl {
+      margin: 1vw;
+      width: 75px;
+    }
+    input {
+      text-align: center;
+      width: 60%;
+      height: 45px;
+    }
+    #url {
+      text-align: left !important;
+      padding-left: 1vw;
+    }
+  }
+
+  .mainButton {
+    width: 60%;
+    height: 10vh;
+    margin: auto;
+  }
+
+  .mt-1 {
+    margin-top: 5vh;
+  }
+  .mt-3 {
+    margin-top: 15vh;
+  }
+}

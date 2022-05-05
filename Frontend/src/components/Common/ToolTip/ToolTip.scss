@@ -1,0 +1,32 @@
+.toolTip {
+  height: 100%;
+  width: 100%;
+  z-index: 901;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .toolTipText {
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 5px;
+    z-index: 900;
+    background: #fff;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .top {
+    bottom: calc(100% + 5px);
+  }
+  .bottom {
+    top: calc(100% + 5px);
+  }
+  .left {
+    right: calc(100% + 5px);
+  }
+  .right {
+    left: calc(100% + 5px);
+  }
+}

@@ -1,6 +1,7 @@
 {
   "name": "web-spider",
   "version": "0.1.0",
+  "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -8,9 +9,15 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.10",
+    "classnames": "^2.3.1",
     "cors": "^2.8.5",
+    "fetch-intercept": "^2.4.0",
+    "http-proxy-middleware": "^2.0.6",
+    "node-sass": "^6.0.1",
+    "prettier": "^2.6.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
     "react-scripts": "4.0.3",
     "request": "^2.88.2",
     "url-exist": "^3.0.0",
