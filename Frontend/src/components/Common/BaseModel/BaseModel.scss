@@ -1,0 +1,20 @@
+.modelBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .model {
+    padding: 5px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    min-height: 100px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+  }
+}

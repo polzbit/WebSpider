@@ -13,3 +13,5 @@ export const MOCK_PAGE = {
   ],
   origin: "http://www.test.com",
 };
+export const GLOBE_ICON =
+  "https://upload.wikimedia.org/wikipedia/commons/c/c4/Globe_icon.svg";

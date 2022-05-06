@@ -1,4 +1,4 @@
-import MainButton from "../MainButton";
+import BaseButton from "../BaseButton";
 
 const SideMenu = ({
   values,
@@ -50,13 +50,13 @@ const SideMenu = ({
         />
       </div>
       <div className="formRow mt-3">
-        <MainButton
+        <BaseButton
           tooltip="Crawl"
           handleClick={handleSubmit}
           disabled={!submitActive}
         >
           {submitStatus}
-        </MainButton>
+        </BaseButton>
       </div>
     </div>
   );

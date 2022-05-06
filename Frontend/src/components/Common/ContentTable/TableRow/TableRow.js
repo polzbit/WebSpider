@@ -1,24 +1,13 @@
-import React, { useState } from "react";
-import TableSubRow from "../TableSubRow/";
+import { GLOBE_ICON } from "../mock";
 
-const TableRow = ({ page_index, page }) => {
-  const [status, setStatus] = useState("SHOW");
-  const PAGE_URL = new URL(page.url);
-  const FAV_ICON = `${PAGE_URL.origin}/favicon.ico`;
-  const GLOBE_ICON =
-    "https://upload.wikimedia.org/wikipedia/commons/c/c4/Globe_icon.svg";
-
-  const toggleLinks = () => {
-    setStatus(status === "SHOW" ? "HIDE" : "SHOW");
-  };
-
+const TableRow = ({ page_index, page, favIcon, toggleLinks }) => {
   return (
     <div className="tableRow" data-testid="tableRow">
       <div className="row row_container ">
         <ul className="page_container">
           <li className="p-col">
             <img
-              src={FAV_ICON}
+              src={favIcon}
               onError={(e) => {
                 e.target.src = GLOBE_ICON;
               }}
@@ -50,16 +39,14 @@ const TableRow = ({ page_index, page }) => {
             </ul>
           </li>
           <li className="p-col show-links">
-            <button onClick={toggleLinks} data-testid="openLinksBtn">
-              {status + " LINKS"}
+            <button
+              onClick={() => toggleLinks(page.url)}
+              data-testid="openLinksBtn"
+            >
+              {"SHOW MORE"}
             </button>
           </li>
         </ul>
-      </div>
-      <div className="row links-container">
-        {status === "HIDE" ? (
-          <TableSubRow links={page.links} globeIcon={GLOBE_ICON} />
-        ) : null}
       </div>
     </div>
   );

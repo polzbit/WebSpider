@@ -1,0 +1,52 @@
+.linkRow {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  width: 85%;
+  min-height: 10vh;
+  border-bottom: 1px solid black;
+  float: right;
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .row_container {
+    margin: 0;
+    padding: 0;
+    min-height: inherit;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+
+    .link_ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: inherit;
+      .link-col {
+        width: 90%;
+        display: inline-block;
+        height: inherit;
+        .link-row {
+          margin-left: 2vw;
+          li {
+            display: inline-block;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            span {
+              font-weight: bold;
+              margin-right: 2vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

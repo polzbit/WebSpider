@@ -1,6 +1,6 @@
 import history from "../../../util/history";
 import { CRAWLER } from "../../../util/route";
-import MainButton from "../../Common/MainButton";
+import BaseButton from "../../Common/BaseButton";
 
 const Home = () => {
   return (
@@ -13,12 +13,12 @@ const Home = () => {
         </div>
       </div>
       <div className="entrance">
-        <MainButton
+        <BaseButton
           tooltip="Start crawl"
           handleClick={() => history.push(CRAWLER)}
         >
           START
-        </MainButton>
+        </BaseButton>
       </div>
     </div>
   );

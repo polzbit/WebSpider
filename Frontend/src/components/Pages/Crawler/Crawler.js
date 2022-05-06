@@ -38,12 +38,14 @@ const Crawler = () => {
 
   const handleSubmit = async (e) => {
     const { url, maxDepth, maxPages } = state.values;
+    if (state.pages.some((page) => page.url === url)) {
+      return;
+    }
     const options = {
       maxDepth: maxDepth,
       maxPages: maxPages,
       pages: [url],
     };
-    console.log(options);
     await startCrawl({ options });
   };
 
@@ -64,10 +66,28 @@ const Crawler = () => {
   };
   const renderPageRow = (page) =>
     new Promise((resolve) => {
-      setState((s) => ({ ...s, pages: [...s.pages, page] }));
+      setState((s) => ({
+        ...s,
+        pages: [...s.pages, { ...page, open: false }],
+      }));
       resolve();
     });
-
+  const handlePageOpen = (url) => {
+    setState((s) => ({
+      ...s,
+      pages: s.pages.map((page) =>
+        page.url === url ? { ...page, open: true } : page
+      ),
+    }));
+  };
+  const handlePageClose = (url) => {
+    setState((s) => ({
+      ...s,
+      pages: s.pages.map((page) =>
+        page.url === url ? { ...page, open: false } : page
+      ),
+    }));
+  };
   return (
     <div className="crawlerPage">
       <div id="form-section" className="column sm">
@@ -83,7 +103,11 @@ const Crawler = () => {
         <div className="row title">
           <h2>RESULTS</h2>
         </div>
-        <ContentTable pages={state.pages} isLink={isValidUrl}></ContentTable>
+        <ContentTable
+          pages={state.pages}
+          toggleLinks={handlePageOpen}
+          handleClose={handlePageClose}
+        />
       </div>
     </div>
   );
